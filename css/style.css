@@ -1,0 +1,13 @@
+html, body {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+.blocks_fix {
+	display: flex;
+}
+
+.text_top {
+	justify-content: center; 
+}
