@@ -1,3 +1,8 @@
+@font-face {
+    font-family: "Myriad"; 
+    src: url(fonts/Myriad Pro Regular/Myriad Pro Regular.ttf);
+   }
+
 html, body {
 	width: 100%;
 	margin: 0;
@@ -8,6 +13,26 @@ html, body {
 	display: flex;
 }
 
+.logo {
+	position: relative;
+}
+
 .text_top {
-	justify-content: center; 
+	justify-content: center;
+	position: absolute;
+	left: 350px;
+	top: 200px;
+	right: 350px;
+	border: 2px solid #ffffff;
+	padding: 20px;
+	color: #ffffff; 
+	text-align: center;
+	font-size: 22px;
+
+}
+
+.text_top span {
+	font-size: 22px;
+	
+	
 }
