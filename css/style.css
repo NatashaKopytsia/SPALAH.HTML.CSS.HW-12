@@ -1,38 +1,426 @@
 @font-face {
     font-family: "Myriad"; 
-    src: url(fonts/Myriad Pro Regular/Myriad Pro Regular.ttf);
-   }
+    src: url(../fonts/Myriad Pro Regular/Myriad Pro Regular.ttf);
+ }
 
-html, body {
-	width: 100%;
+@font-face {
+    font-family: "Built"; 
+    src: url(../fonts/built.ttf);
+}
+
+@font-face {
+    font-family: "Roboto Regular"; 
+    src: url(../fonts/3966.ttf);
+}
+
+@font-face {
+    font-family: "21 Cent"; 
+    src: url(../fonts/21Cent.otf);
+}
+
+html,body{
 	margin: 0;
-	padding: 0;
+	height: 100%;
+	width: 100%;
+	text-align: center;
 }
 
-.blocks_fix {
+.page {
 	display: flex;
+	flex-direction:column;
+	min-height: 100%;
 }
 
-.logo {
+.logo img{
+	width: 100%;
+}
+.logo img{
 	position: relative;
+	z-index: 2;
+	background-size: cover;
+}
+
+.show-navi {
+		height: 50px;
+		width: 50px;
+		position: absolute;
+		right: 40px;
+		top: 40px;
+		background: #e84545;
+		display: block;
+		z-index: 10;
+}
+
+.show-navi:after {
+	width: 35px;
+	height: 2.5px;
+	box-shadow: 0 8px #ffffff,0 -8px #ffffff;
+	content: '';
+	background: #ffffff;
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
 }
 
 .text_top {
-	justify-content: center;
 	position: absolute;
-	left: 350px;
 	top: 200px;
-	right: 350px;
+	left: 300px;
+	width: 820px;
 	border: 2px solid #ffffff;
 	padding: 20px;
 	color: #ffffff; 
-	text-align: center;
 	font-size: 22px;
+	text-align: center;
+	z-index: 3;
+}
 
+.text_top_2 {
+	display: none;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 820px;
+	border: 2px solid #ffffff;
+	padding: 20px;
+	color: #ffffff; 
+	font-size: 22px;
+	text-align: center;
+	z-index: 3;
 }
 
 .text_top span {
 	font-size: 22px;
-	
+
+}
+
+.text_top img:first-child {
+	vertical-align: top;
+}
+
+.text_top img:last-child {
+	vertical-align: bottom;
+}
+
+.text span {
+	font-family: "Built";
+	font-size: 147px;
+	color: #f2f2f2;
+}
+
+.text {
+	text-align: center;
+	z-index: 1;
+	padding-top: -300px;
+	margin-top: -70px;
+}
+
+.blocks {
+	display: flex;
+	margin: 50px 200px 50px 200px;
+}
+
+.block {
+	box-sizing:border-box;
+	background-color: #f5f5f5;
+	margin: 15px;
+	padding: 15px;
+}
+
+.bl {
+	flex-wrap: nowrap;
+}
+
+.bl .block {
+	width: 50%;
+}
+
+.block {
+	text-align: center;
+}
+
+.block img {
+	}
+
+.main {
+	font-size: 20px;
+	font-family: "Built";
+}
+
+.block div {
+	text-align: left;
+	color: #6c7279;
+}
+
+
+.block:first-child, .block:last-child{
+    padding-top: 30px;
+}
+
+.block a {
+	color: #e84545;
+	font-size: 12px;
+	font-family: "Roboto";
+	text-align: center;
+}
+
+.block div {
+	font-family: "Roboto";
+	font-size: 14px;
+	line-height: 1.5;
+}
+
+
+.blocks_small{
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	-webkit-flex-wrap: wrap;
+	-moz-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	-o-flex-wrap: wrap;
+	flex-wrap: wrap;
+	width: 100%;
+}
+
+.block_small{
+	width: 50%;
+	position: relative;
+	padding-top: 23%;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	border-left: 5px solid #fff;
+	border-bottom: 5px solid #fff;
+}
+
+.block_small img {
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin: auto;
+	top: 0;
+	height: 100%;
+}
+
+.block_ic_04 {
+	position: relative;
+	z-index: 4;
+}
+
+.l1 img{
+	height: 8%;
+	width: 37%;
+	position: absolute;
+	z-index: 5;
+	margin-top: 100px;
+	margin-left: 220px;
+}
+
+.block_small span {
+ 	position: absolute;
+ 	margin-top: -200px;
+ 	color: #ffffff;
+ 	font-size: 24px;
+ 	margin-left: -70px;
+ 	font-family: "Built";
+ 	text-align: right;
+}
+
+.block_small p {
+ 	position: absolute;
+ 	margin-top: -150px;
+ 	color: #ffffff;
+ 	font-size: 20px;
+ 	margin-left: 100px;
+ 	margin-right: 100px;
+ 	font-family: "Open Sans";
+ 	text-align: left;
+}
+
+
+.block_small {
+width: 50%;
+height: 100%;
+background: purple;
+transition-duration:1s;
+transition-delay:0.2s;
+}
+.block_small_01, .block_small_02, .block_small_03, .block_small_04 {
+	transition-properties:background;
+
+}
+.block_small_01:hover:after {
+	background: red;
+}
+
+.block_small_01:hover, .block_small_02:hover, .block_small_03:hover, .block_small_04:hover{
+	opacity: 0.5;
+	background: orange;
+
+}
+
+
+.content span {
+	font-size: 22px;
+	font-family: "21 Cent";
+}
+
+.content {
+	margin: 20px 320px 10px 320px;
+	text-align: center;
+}
+
+
+.content img:first-child {
+	vertical-align: top;
+	padding-right: 10px;
+}
+
+.content img:last-child {
+	vertical-align: middle;
+	padding-left: 10px;
+}
+
+button {
+	font-family: "Roboto Regular";
+	font-size: 14px;
+	background-color: #e84545;
+	text-align: center;
+	padding: 20px 30px 20px 30px;
+	margin: 20px 600px 20px 600px;
+}
+
+button a {
+	text-decoration: none;
+	color: #ffffff;
+}
+
+
+footer {
+	background: #2f324c;
+	padding: 10px;
+	color: #fff;
+	width: 100%;
+	height: 70%;
+}
+
+
+.footer_left {
+	float: left;
+}
+
+.footer_right {
+	float: right;
+}
+
+.footer_left img {
+	margin-left: 250px;
+	margin-top: 20px;
+}
+
+ul.hr {
+    padding: 4px; 
+    margin-right: 35px;
+    margin-top: 40px;
+}
+
+ul.hr li {
+    display: inline; 
+    margin-right: 35px;
+    padding: 3px;
+}
+
+
+ul.hr li:hover {
+	background-color: #2a2d44;
+	border-radius: 5px;
+	padding-top: 8px;
+	padding-bottom: 8px;
+}
+
+ul.hr li:first-child {
+	border: 1px solid #ffffff;
+	border-radius: 5px;
+	padding: 8px;
+}
+
+.footer_right ul {
+	margin-bottom: 40px;
+}
+
+.footer_right a {
+	text-decoration: none;
+	font-family: "Open Sans";
+	font-size: 14px; 
+	color: #ffffff;
+
+}
+
+.copy span {
+	color: #5b5d76;
+	font-family: "Open Sans";
+	font-size: 14px; 
+}
+
+
+@media screen and (max-width:600px){
+	.blocks_fix{}
+	.text_top { 
+		display: none;
+	}
+
+
+	.text {
+		width: 100%;
+	}
+
+	.blocks {width: 100%;
+		margin-left: 120px;
+		display: block;
+	}
+	.block {width: 700px;}
+	.block_small{display: none;
+	}
+	.content {
+		display: none;
+	}
+	.content_1 {
+	}
+
+	button {
+		margin: 10px 0px 10px 0px;
+		
+	}
+
+	.footer_right ul{ width: 100%;
+	}
+
+	ul.hr li{
+    	margin-right: 70px;
+  
+    }
+
+	ul.hr li:hover {
+		padding-top: 2px;
+		padding-bottom: 2px;
+	}
+
+	ul.hr li:first-child {
+		padding: 2px;
+	}
+
+	.footer_left img { display: none;
+		margin-top:30px;
+		padding: 0;}
+	.copy {
+		bottom: 0;
+	}
+
 	
 }
